@@ -220,9 +220,3 @@ RULES = [
 ```
 
 El orden importa: los patrones se evalúan de arriba hacia abajo.
-
----
-
-## Licencia
-
-MIT — libre para uso académico y personal.
