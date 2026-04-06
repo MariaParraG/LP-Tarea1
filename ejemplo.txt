@@ -1,0 +1,19 @@
+GRAMMAR
+# Gramática para expresiones aritméticas (LL(1) simplificada)
+# Formato: no_terminal -> símbolo1 símbolo2 ... | alternativa
+expr      -> term expr_tail
+expr_tail -> + term expr_tail
+expr_tail -> - term expr_tail
+expr_tail -> epsilon
+term      -> factor term_tail
+term_tail -> * factor term_tail
+term_tail -> / factor term_tail
+term_tail -> epsilon
+factor    -> ( expr )
+factor    -> NUMBER
+factor    -> ID
+END_GRAMMAR
+
+STRING
+3 + x * 2
+END_STRING
